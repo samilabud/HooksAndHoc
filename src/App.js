@@ -3,18 +3,18 @@ import UserList from './components/userslist/userlist.component';
 import './App.scss';
 
 const fetchUserSelected = (userId, setuserData,setUser) =>{
-    setTimeout(()=>{
-        fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-        .then(data=>data.json())
-        .then(data=>{
-            if(data.name){
-                setuserData({address:data.address,company:data.company})
-                setUser(userChange(data.name))
+    
+        const fetchData = async()=>{
+            const getData = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+            const dataJson = await getData.json();
+            if(dataJson.name){
+                setuserData({address:dataJson.address,company:dataJson.company})
+                setUser(userChange(dataJson.name))
             }else{
                 console.log("No existen datos para ese usuario.")
             }
-        })
-    },500)
+        }
+        fetchData();
 }
 //
 const INITIAL_STATE = {

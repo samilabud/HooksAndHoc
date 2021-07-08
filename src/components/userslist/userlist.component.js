@@ -11,17 +11,17 @@ export const UserList = ({userSetter}) =>{
     useEffect(()=>{
         let users = [];
         //fetch
-        fetch(apiURL)
-        .then(data=>data.json())
-        .then(data=>data.map(value=>(
-                users.push({name:value.name,id:value.id})
-            ))
-        )
-        setTimeout(()=>{
+        const fetchData = async () => {
+            const response = await fetch(apiURL);
+            const resJson = await response.json();
+            resJson.map(value=>(
+                        users.push({name:value.name,id:value.id})
+                    ))
             setapiUsers(users);
             if(users.length<=0)
-                console.log("Error consiguiendo los usuarios. Favor revisar su conexion a internet.");
-        },500)
+                console.log("Error getting user list from API. Please check your internet connection.");
+        }
+        fetchData();
     },[])
 
     const onUserListChange = (event) =>{
