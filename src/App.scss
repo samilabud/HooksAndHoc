@@ -7,9 +7,10 @@ body{
     border:#E76F51 1px solid;
     flex-flow: column wrap;
     width: 40vw;
-    height: 17vw;
+    min-height: 17vw;
     margin: auto;
     margin-top: 1vw;
+    padding-bottom: 15px;
 }
 .header{
     border-radius: 3px;
@@ -56,4 +57,22 @@ body{
 }
 .userData span{
     font-size: 10pt;
+}
+
+.userPostData {
+    border: #E9C46A 1px dotted;
+    width: 90%;
+    margin-top: 10px;
+    padding: 5px;
+}
+.userPostData div{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 1px;
+    font-size: 10pt;
+}
+.userPostData span{
+    font-size: 10pt;
+    font-weight: bold;
 }
