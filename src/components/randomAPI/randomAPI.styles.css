@@ -40,6 +40,10 @@ p {
 	max-width: 100%;
 	text-align: center;
 }
+.card-container p a{
+	color: whitesmoke;
+	text-decoration: none;
+}
 
 .card-container .pro {
 	color: #231E39;
@@ -59,7 +63,7 @@ p {
 	padding: 7px;
 }
 
-button.primary {
+button.primary, a.primary {
 	background-color: #03BFCB;
 	border: 1px solid #03BFCB;
 	border-radius: 3px;
@@ -67,9 +71,10 @@ button.primary {
 	font-family: Montserrat, sans-serif;
 	font-weight: 500;
 	padding: 10px 25px;
+	text-decoration: none;
 }
 
-button.primary.ghost {
+button.primary.ghost, a.primary.ghost {
 	background-color: transparent;
 	color: #02899C;
 }

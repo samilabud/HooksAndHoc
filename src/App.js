@@ -9,13 +9,18 @@ import RandomAPI from './components/randomAPI/randomAPI.component';
 import './App.css';
 
 
+
 export const App = () => {
+    const REACT_VERSION = React.version;
     return ( 
         <div>
             <Router>
                 <div>
                     <nav>
                         <ul>
+                            <li>
+                                <span>React Version: {REACT_VERSION}</span>
+                            </li>
                             <li>
                                 <Link to="/">Home</Link>
                             </li>

@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
+import { useHistory } from "react-router-dom";
 
 const SimpleCounter = () =>{
   const [counter, setCounter] = useState(0);
-
+  let history = useHistory();
   return (
     <div>
       <div>
@@ -11,6 +12,11 @@ const SimpleCounter = () =>{
       </div>
      <div>
       <button onClick={()=>{setCounter(counter+1)}}>Increase Counter</button>
+      <button onClick={()=>{
+        history.push({
+          pathname: '/randomAPI',
+          state: { name: 'Redirigido con useHistory' }
+        })  }}>Ir a RandomAPI</button>
       </div>
     </div>
   )
