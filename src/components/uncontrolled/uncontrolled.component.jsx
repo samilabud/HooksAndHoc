@@ -25,7 +25,7 @@ export const Uncontrolled = () =>{
   //Auth
   const signUpButton = (event) =>{
     event.preventDefault();
-    console.log(`Trying to login with Name:${signUpInputName.current.value} Email: ${signUpInputEmail.current.value} and Password: ${signUpPassword.current.value}`);
+    console.log(`Trying to signUp with Name:${signUpInputName.current.value} Email: ${signUpInputEmail.current.value} and Password: ${signUpPassword.current.value}`);
   };
 
   const signInButton = (event) => {
