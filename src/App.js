@@ -6,6 +6,8 @@ import UserPostCard from './components/userpostcard/userpostcard.component';
 //Practicing
 import SimpleCounter from './components/simplecounter/simplecounter.component';
 import RandomAPI from './components/randomAPI/randomAPI.component';
+import Uncontrolled from './components/uncontrolled/uncontrolled.component';
+
 import './App.css';
 
 
@@ -30,6 +32,9 @@ export const App = () => {
                             <li>
                                 <Link to="/randomAPI">Request To Random API</Link>
                             </li>
+                            <li>
+                                <Link to="/uncontrolled">Uncontrolled Component</Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -44,6 +49,9 @@ export const App = () => {
                     </Route>
                     <Route exact path="/randomAPI">
                         <RandomAPI />
+                    </Route>
+                    <Route exact path='/uncontrolled'>
+                        <Uncontrolled />
                     </Route>
                 </Switch>
             </Router>
